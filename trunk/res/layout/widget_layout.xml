@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2011 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/widget_margin_top"
+    android:layout_marginBottom="@dimen/widget_margin_bottom"
+    android:layout_marginLeft="@dimen/widget_margin_left"
+    android:layout_marginRight="@dimen/widget_margin_right"
+    android:background="@android:color/transparent">
+    <!-- We define separate margins to allow for flexibility in twiddling the margins
+         depending on device form factor and target SDK version. -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:padding="15dp"
+        android:focusable="true">
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal|top"
+                android:background="@android:drawable/bottom_bar"
+                android:baselineAligned="false"
+                android:clickable="false"
+                android:divider="#ffffff"
+                android:orientation="horizontal"
+                android:radius="10dp">
+
+                <ImageButton
+                        android:layout_width="44dp"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/wifiButton"
+                        android:padding="2dp"
+                        android:paddingLeft="2dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="2dp"
+                        android:paddingBottom="2dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:baselineAlignBottom="false"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:radius="4dp"
+                        android:longClickable="false"
+                        android:textAlignment="viewEnd"
+                        android:visibility="visible"
+                        android:src="@drawable/ic_wifi"
+                        android:contentDescription="@string/wifi_setting"
+                        android:scaleType="fitCenter"
+                        android:background="@color/black_overlay"/>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>
